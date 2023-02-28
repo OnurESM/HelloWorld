@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<label for="promo">PROMOTION : </label>
+<input type="text" id="promo" onmouseover="changePromo()">
+<div id="maDiv"></div>
+<script>
+  //document.getElementById('promo').addEventListener('change',changePromo);
+  // recupère l'element div
+  //let maDiv=document.getElementById('maDiv');
+  // change son texte en javascript
+  //maDiv.innerText='DWWM 147B';
+  function changePromo(){
+  let laPromo= document.getElementById('promo').value;
+  let nouvelElement= document.createElement('p');
+  nouvelElement.innerText= laPromo;
+  document.getElementById('maDiv').appendChild(nouvelElement);
+  window.alert('Nouvel element ajouté');
+  }
+
+
+</script>
+</body>
+</html>
